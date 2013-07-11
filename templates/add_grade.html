@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Hackbright Helvetica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form action="/new_grade">
+        <label for="github">github:</label>
+        <input type="text" name="github" />
+        <label for="project">Project:</label>
+        <input type="text" name="project" /> 
+        <label for="grade">Grade</label>
+        <input type="text" name="grade" />
+        <input type="submit">
+    </form>
+</body>
+</html>

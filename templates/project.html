@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Hackbright Helvetica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>{{project_title}}</h1>
+<h2>All Student Grades</h2>
+<table border="1">
+    <tr>
+        <th>Student Name</th>
+        <th>Student Github</th>
+        <th>Grade</th>
+    </tr> 
+    {% for item in students %}
+    <tr>
+        <td>{{item[1]}}, {{item[0]}}</td>
+        <td><a href="/student?github={{item[2]}}">{{item[2]}}</a></td>
+        <td>{{item[3]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p>This student has shown extreme courage and bravery under fire and has generally proved their ability to do simple arithmetic.</p>
+<p>They haven't, however, contributed cupcakes to the class.</p>
+</body>
+</html>

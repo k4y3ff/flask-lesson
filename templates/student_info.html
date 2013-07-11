@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Hackbright Helvetica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Student: {{last_name}}, {{first_name}}</h1>
+<h2>Github account: {{github}}</h2>
+<h3>Grades</h3>
+<table border="1">
+    <tr>
+        <th>Project</th>
+        <th>Grade</th>
+    </tr> 
+    {% for item in projects %}
+    <tr>
+        <td><a href="/project?title={{item[0]}}">{{item[0]}}</a></td>
+        <td>{{item[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p>THE BEST STUDENT</p>
+</body>
+</html>
